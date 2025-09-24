@@ -3,7 +3,6 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-
 const config = {
     url: process.env.AD_URL, // IP e porta do servidor AD Ex: ldap://XXX.XXX.XXX.XXX:XXX
     baseDN: process.env.DOMAIN_CONTROLLER, //nome do domínio, exemplo: teste.local

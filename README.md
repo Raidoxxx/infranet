@@ -21,7 +21,7 @@ O **InfraNet** é uma plataforma corporativa completa para gestão de comunicaç
 
 ### ✨ Principais Funcionalidades
 
-- 📢 **Sistema de Anúncios** - Criação e gestão de comunicados corporativos
+- 📢 **Sistema de Comunicados** - Criação e gestão de comunicados corporativos
 - 🏢 **Gestão de Setores** - Organização hierárquica por departamentos
 - 🔗 **Links Compartilhados** - Centralização de recursos importantes
 - 👥 **Integração AD** - Autenticação via Active Directory

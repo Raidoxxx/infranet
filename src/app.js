@@ -1,8 +1,19 @@
 const express = require('express');
 const app = express();
-const port = 8080;
-const {healthRouter} = require('./routes/v1/health');
+require('dotenv').config();
+const port = process.env.PORT || 3000;
 const routes = require('./routes/routes');
+const Database = require('./database/Database');
+
+// Testa a conexão com o banco de dados ao iniciar o servidor
+const database = new Database();
+database.testConnection()
+  .then(() => {
+    console.log('Conexão com o banco de dados estabelecida com sucesso.');
+  })
+  .catch((error) => {
+    console.error('Erro ao conectar ao banco de dados:', error);
+  });
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -15,7 +26,8 @@ app.use((req, res, next) => {
 });
 
 // Rotas da API
-app.use('/v1/api', routes);
+app.use('/api/v1', routes);
+
 
 // Global error handler middleware
 app.use((err, req, res, next) => {

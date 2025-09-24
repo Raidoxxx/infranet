@@ -1,6 +1,5 @@
 const ad = require("../config/activeDirectory");
-
- //Método para autenticar usuários
+ 
  exports.user_authenticate = async (req, res) => {
    const { user, pass, domain } = req.body;
    try {
